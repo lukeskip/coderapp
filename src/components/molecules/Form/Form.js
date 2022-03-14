@@ -1,20 +1,16 @@
-import React,{useState} from 'react'
+import React,{useState,useContext} from 'react'
 import {View,TextInput,Button} from 'react-native'
+import ListContext from '../../../contexts/ListContext'
 import generalStyles from '../../../styles/generalStyles'
 
-export default function Form ({add}){
-    const [newItem,setNewItem ] = useState('');
-
-    const handleNewItem  = text => setNewItem(text);
+export default function Form (){
     
-    function pressAction(){
-        add(newItem);
-    }
+    const {addElement,handleNewItem,newItem} = useContext(ListContext);
 
     return (
         <View>
             <TextInput onChangeText={handleNewItem} style={generalStyles.input}></TextInput>
-            <Button onPress={pressAction} title="Agregar Elento"/>
+            <Button onPress={()=>addElement(newItem)} title="Agregar Elemento"/>
         </View>
     )
 }

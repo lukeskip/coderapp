@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React,{useContext} from 'react';
+import React from 'react';
 import {
   Text,
   View,
@@ -23,6 +23,7 @@ export default function App () {
 
     <ListContextProvider>
       <View style={generalStyles.container}>
+        <Form></Form>
         <ListContainer></ListContainer>
       </View>
     </ListContextProvider>
