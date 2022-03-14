@@ -11,8 +11,8 @@ export default function ListItem ({id,label,checked}){
 
     return (
         <View style={generalStyles.containerFlex}>
-           <Text onPress={()=>checkElement(id)} style={[generalStyles.titleText,generalStyles.flexItem]}>
-                {checked === true ? "x" : null} {label}
+           <Text onPress={()=>checkElement(id)} style={[generalStyles.titleText,generalStyles.flexItem, checked ? generalStyles.titleTextChecked : null]}>
+            {label}
            </Text>
            <View style={generalStyles.containerFlex}>
                 <View>

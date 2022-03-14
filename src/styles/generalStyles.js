@@ -20,6 +20,10 @@ const generalStyles = StyleSheet.create({
         fontWeight: "bold",
         width:'80%'
     },
+    titleTextChecked: {
+        textDecorationLine: 'line-through',
+        textDecorationStyle: 'solid',
+    },
     input:{
         backgroundColor:'#EEEEEE',
         marginBottom:10,

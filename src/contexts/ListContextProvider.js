@@ -22,15 +22,16 @@ export default function ListContextProvider ({children}){
 
   function checkElement(id){
       
-      let updatedItems = items;
+      let updatedItems = [...items];
 
       let item = updatedItems.find(function(found){
           return found.id === id;
       });
 
       item.checked = true;
-     
+
       setItems(updatedItems);
+    
   }
 
   
@@ -40,24 +41,24 @@ export default function ListContextProvider ({children}){
           {
             id: 1,
             label:'Comprar pan',
-            checked:"false"
+            checked:true
           },
           {
             id: 2,
             label:'Ir a la lavandería',
-            checked:"false"
+            checked:false
           },
           {
             id: 3,
             label:'Hacer la tarea de react native',
-            checked:"false"
+            checked:false
           },
     ]
     setItems(itemsInit)
   },[]);
 
   useEffect(()=>{
-    console.log(items);
+    console.log("Se ejecuto",items);
   },[items]);
 
 
