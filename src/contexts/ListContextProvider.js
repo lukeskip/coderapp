@@ -57,9 +57,6 @@ export default function ListContextProvider ({children}){
     setItems(itemsInit)
   },[]);
 
-  useEffect(()=>{
-    console.log("Se ejecuto",items);
-  },[items]);
 
 
     return(
