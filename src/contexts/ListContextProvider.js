@@ -8,10 +8,13 @@ export default function ListContextProvider({children}) {
   const [allDone, setAllDone] = useState(false);
 
   function addElement(element) {
-    setItems([
-      ...items,
-      {id: items.length + 1, label: element, checked: false},
-    ]);
+    if(element !== ''){
+      setItems([
+        ...items,
+        {id: items.length + 1, label: element, checked: false},
+      ]);
+    }
+    
   }
 
   function resetList(){
