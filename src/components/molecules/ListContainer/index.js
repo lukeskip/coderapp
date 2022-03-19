@@ -8,9 +8,7 @@ import generalStyles from '../../../styles/generalStyles'
 
 export default function ListContainer(){
     const {items} = useContext(ListContext);
-    useEffect(()=>{
-        console.log(items);
-    },[]);
+    
     return (
         
             <View style={[generalStyles.section]}>

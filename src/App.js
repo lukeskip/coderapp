@@ -6,26 +6,21 @@
  * @flow strict-local
  */
 
+
 import React from 'react';
-import {
-  Text,
-  View,
-} from 'react-native';
-import ListContainer from './components/molecules/ListContainer/'
-import Form from './components/molecules/Form/Form'
+import Greeting from './components/views/Greeting/Greeting'
 import ListContextProvider from './contexts/ListContextProvider'
+import Welcome from './components/views/Welcome/Welcome'
 import generalStyles from './styles/generalStyles'
 
  
 export default function App () {
   
+  
   return (
 
     <ListContextProvider>
-      <View style={generalStyles.container}>
-        <Form></Form>
-        <ListContainer></ListContainer>
-      </View>
+      <Welcome></Welcome>
     </ListContextProvider>
   );
 };
