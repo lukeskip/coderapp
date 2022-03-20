@@ -19,17 +19,18 @@ const generalStyles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     width: '80%',
+    fontFamily:'RobotoSlab-ExtraLight'
   },
   titleTextChecked: {
     textDecorationLine: 'line-through',
     textDecorationStyle: 'solid',
   },
   header1:{
-    fontSize: 30,
+    fontSize: 40,
     fontWeight: 'bold',
     padding:20,
     marginBottom:20,
-    fontFamily:'RobotoSlab-Black'
+    fontFamily:'RobotoSlabBlack'
   },
   input: {
     backgroundColor: '#EEEEEE',

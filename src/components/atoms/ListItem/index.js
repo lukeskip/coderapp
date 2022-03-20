@@ -4,6 +4,7 @@ import ListItemStyles from './listItemStyles';
 import generalStyles from '../../../styles/generalStyles';
 import ListContext from '../../../contexts/ListContext';
 
+
 export default function ListItem({id, label, checked}) {
   const {deleteElement, checkElement} = useContext(ListContext);
 
