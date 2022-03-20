@@ -28,7 +28,8 @@ const generalStyles = StyleSheet.create({
     fontSize: 30,
     fontWeight: 'bold',
     padding:20,
-    marginBottom:20
+    marginBottom:20,
+    fontFamily:'RobotoSlab-Black'
   },
   input: {
     backgroundColor: '#EEEEEE',
