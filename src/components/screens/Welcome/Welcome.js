@@ -5,7 +5,7 @@ import {
 } from 'react-native';
 import ListContainer from '../../molecules/ListContainer/'
 import Form from '../../molecules/Form/Form'
-import Greeting from '../../views/Greeting/Greeting'
+import Greeting from '../../screens/Greeting/Greeting'
 import generalStyles  from "../../../styles/generalStyles";
 import ListContext from '../../../contexts/ListContext'
 
