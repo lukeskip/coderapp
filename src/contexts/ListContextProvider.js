@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import ListContext from './ListContext';
+import {itemsInit} from '../constants/items'
 
 export default function ListContextProvider({children}) {
   const [items, setItems] = useState([]);
@@ -43,23 +44,6 @@ export default function ListContextProvider({children}) {
   }
 
   useEffect(() => {
-    const itemsInit = [
-      {
-        id: 1,
-        label: 'Comprar pan',
-        checked: true,
-      },
-      {
-        id: 2,
-        label: 'Ir a la lavandería',
-        checked: false,
-      },
-      {
-        id: 3,
-        label: 'Hacer la tarea de react native',
-        checked: false,
-      },
-    ];
     setItems(itemsInit);
   }, []);
 

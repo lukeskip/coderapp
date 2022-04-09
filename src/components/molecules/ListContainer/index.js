@@ -1,20 +1,21 @@
-import React ,{useContext,useEffect} from 'react'
+import React ,{useEffect} from 'react'
+import {useSelector,connect,useDispatch} from 'react-redux';
 import { View,Text } from 'react-native'
 import ListItem from '../../atoms/ListItem/'
-import ListContext from '../../../contexts/ListContext'
 import generalStyles from '../../../styles/generalStyles'
 
 
 
 export default function ListContainer(){
-    const {items} = useContext(ListContext);
+    const dispatch  = useDispatch(); 
+    const items     = useSelector(state => state.items);
     
     return (
         
             <View style={[generalStyles.section]}>
 
                 {
-                    items.map((item,index)=>{
+                    items.items.map((item,index)=>{
                         return (
                             <ListItem style={generalStyles.listItem} label={item.label} checked={item.checked} key={index} id={item.id}></ListItem> 
                         )
